@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+.env
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# VSCode settings
+.vscode/
+
+# Large datasets
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+
+# Ignore specific large file
+youtube-comment-analyzer/backend/Reviews.csv
