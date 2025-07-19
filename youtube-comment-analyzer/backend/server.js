@@ -61,8 +61,8 @@ app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
 // Fetch comments from YouTube API (if needed)
 async function fetchComments(videoId) {
-  const apiKey = 'AIzaSyBxfePSfCi_AftH_8sNoGnd-aRrKLgg2LU'; 
-  const apiUrl = `https://www.googleapis.com/youtube/v3/commentThreads?key=${apiKey}&videoId=${videoId}&part=snippet&maxResults=20`;
+  const apiKey = 'Your API KEY'; 
+  const apiUrl = `https://www.googleapis.com/youtube/v3/Your API KEY/commentThreads?key=${apiKey}&videoId=${videoId}&part=snippet&maxResults=20`;
 
   const response = await axios.get(apiUrl);
   const comments = response.data.items.map(item => item.snippet.topLevelComment.snippet.textDisplay);
