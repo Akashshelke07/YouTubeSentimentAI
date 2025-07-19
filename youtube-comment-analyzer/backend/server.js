@@ -33,10 +33,10 @@ app.get('/comments', async (req, res) => {
 
 async function fetchComments(videoId) {
     //our youtube api key...
-    const apiKey = 'AIzaSyBxfePSfCi_AftH_8sNoGnd-aRrKLgg2LU'; 
+    const apiKey = 'Your API KEY'; 
 
 
-    const apiUrl = `https://www.googleapis.com/youtube/v3/commentThreads?key=${apiKey}&videoId=${videoId}&part=snippet&maxResults=20`;
+    const apiUrl = `https://www.googleapis.com/youtubeurl/v3/commentThreads?key=${apiKey}&videoId=${videoId}&part=snippet&maxResults=20`;
 
     const response = await axios.get(apiUrl);
     const comments = response.data.items.map(item => item.snippet.topLevelComment.snippet.textDisplay);
